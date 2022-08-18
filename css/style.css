@@ -1,0 +1,119 @@
+:root{
+    /* Font */
+    --main-font: 'Open Sans', sans-serif;
+    --seconnd-font: 'Raleway', sans-serif;
+    /* Text Color */
+    --text-color: #9DA4BD;
+    --light-color: #FFFFFF;
+    --effect-tx-color: #FF6C00;
+    --list-txt-color: #303030;
+    --grey-txt-color-60:rgba(157, 164, 189, 0.6);
+    /* Background Color */
+    --effect-bg-color: #FF6C00;
+}
+
+/* Reset */
+
+.link {
+    text-decoration: none;
+    color: currentColor;
+}
+
+.list{
+    list-style: none;
+}
+
+/* Fover and Focus */
+
+.header .link:hover,
+.header .link:focus{
+    color: var(--effect-tx-color);
+}
+
+/*  */
+
+.page{
+    font-family: var(--main-font);
+    font-size: 18px;
+    line-height: calc(30 / 18);
+    letter-spacing: 0.02em;
+        
+    color: var(--text-color);
+}
+
+.header .link{
+    font-weight: 600;
+    font-size: 12px;
+    line-height: calc(16 / 12);
+    letter-spacing: 0.1em;
+    
+    color: var(--white-color);
+}
+
+.btn{
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: calc(16 / 12);
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    
+    color: var(--light-color);
+    background-color: transparent;
+
+    cursor: pointer;
+}
+
+/* Hero */
+
+.hero {}
+
+.hero-link {
+    font-weight: 600;
+    font-size: 11px;
+    line-height:calc(15 / 11);
+    letter-spacing: 0.2em;
+    
+    color: var(--list-txt-color);
+}
+
+.hero-uppertitle {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: calc(15 / 11);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    
+    color: var(--grey-txt-color-60);
+}
+
+.hero-title {
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 72px;
+    line-height: calc(85 / 72);
+    letter-spacing: 0.05em;
+    
+    color: var(--light-color);
+}
+
+.hero-subtitle {
+    letter-spacing: 0.02em;
+    
+    color: var(--text-color);
+}
+
+.slider-btn.active{
+    color: var(--light-color);
+}
+
+.slider-btn {
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: calc(15 / 11);
+    letter-spacing: 0.1em;
+    
+    color: var(--grey-txt-color-60);
+    background-color: transparent;
+}
