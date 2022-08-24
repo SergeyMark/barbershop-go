@@ -12,13 +12,21 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@700&display=swap"
       rel="stylesheet"
     />
+    <!-- normalize -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- Style -->
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body class="page">
     <!-- header -->
     <header class="header">
-      <nav class="nav">
+      <nav class="header-nav">
         <a class="logo" href="./index.html">
           <img
             class="logo-img"
@@ -28,26 +36,26 @@
             height="55"
           />
         </a>
-        <ul class="list">
-          <li class="list-item">
-            <a class="link" href="">About</a>
+        <ul class="header-list">
+          <li class="header-item">
+            <a class="header-link" href="">About</a>
           </li>
-          <li class="list-item">
-            <a class="link" href="">Services and prices</a>
+          <li class="header-item">
+            <a class="header-link" href="">Services and prices</a>
           </li>
-          <li class="list-item">
-            <a class="link" href="">Barbers</a>
+          <li class="header-item">
+            <a class="header-link" href="">Barbers</a>
           </li>
-          <li class="list-item">
-            <a class="link" href="">Contacts</a>
+          <li class="header-item">
+            <a class="header-link" href="">Contacts</a>
           </li>
         </ul>
       </nav>
       <div class="header-group">
-        <a class="link" href="tel:+380441111111" target="_blank" rel=""
+        <a class="tel-link" href="tel:+380441111111" target="_blank" rel=""
           >+38 044 111 11 11</a
         >
-        <button class="btn" type="button">Online-booking</button>
+        <button class="header-btn btn" type="button">Online-booking</button>
       </div>
     </header>
     <!-- main -->
@@ -136,27 +144,33 @@
       <section class="section">
         <p class="uppertitle">spend your time with the best masters</p>
         <h2 class="section-title">Services and prices</h2>
-        <ul class="list">
-          <li class="list-item">
-            <ul class="inner-items">
-              <li class="inner-item">Men’s haircut from 300 uah.</li>
-              <li class="inner-item">Beard trim from 300 uah.</li>
-              <li class="inner-item">Mustache trim from 200 uah.</li>
-              <li class="inner-item">Straight razor shave from 200 uah.</li>
+        <ul class="priece-list">
+          <li class="priece-item">
+            <ul class="priece-inner-items">
+              <li class="priece-inner-item">Men’s haircut from 300 uah.</li>
+              <li class="priece-inner-item">Beard trim from 300 uah.</li>
+              <li class="priece-inner-item">Mustache trim from 200 uah.</li>
+              <li class="priece-inner-item">
+                Straight razor shave from 200 uah.
+              </li>
             </ul>
           </li>
-          <li class="list-item">
-            <ul class="inner-items">
-              <li class="inner-item">Trainee’s haircutfrom 50 uah.</li>
-              <li class="inner-item">Haircut under the nozzlefrom 200 uah.</li>
-              <li class="inner-item">
+          <li class="priece-item">
+            <ul class="priece-inner-items">
+              <li class="priece-inner-item">Trainee’s haircutfrom 50 uah.</li>
+              <li class="priece-inner-item">
+                Haircut under the nozzlefrom 200 uah.
+              </li>
+              <li class="priece-inner-item">
                 Children’s haircut (0-12 y.o.)from 300 uah.
               </li>
-              <li class="inner-item">Camouflage of gray hairfrom 200 uah.</li>
+              <li class="priece-inner-item">
+                Camouflage of gray hairfrom 200 uah.
+              </li>
             </ul>
           </li>
         </ul>
-        <button class="btn" type="button">online-booking</button>
+        <button class="priece-btn btn" type="button">online-booking</button>
       </section>
       <!-- school -->
       <section class="section">
