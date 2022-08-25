@@ -11,6 +11,25 @@
     --grey-txt-color-60:rgba(157, 164, 189, 0.6);
     /* Background Color */
     --effect-bg-color: #FF6C00;
+    --bg-card-cl: #F7F7F7;
+}
+
+.page {
+    font-family: var(--main-font);
+    font-size: 18px;
+    line-height: calc(30 / 18);
+
+    color: var(--text-color);
+}
+
+.container{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.section{
+    padding: 130px 0;
 }
 
 /* Reset */
@@ -44,20 +63,35 @@ img{
 }
 
 .header-btn:hover,
-.header-btn:focus {
+.header-btn:focus,
+.priece-btn:hover,
+.priece-btn:focus {
     color: var(--light-color);
     background-color: var(--effect-tx-color);
 }
 
 /* header */
 
-.page{
-    font-family: var(--main-font);
-    font-size: 18px;
-    line-height: calc(30 / 18);
-        
-    color: var(--text-color);
+.header-container{
+    display: flex;
+    align-items: center;
 }
+
+.header-nav{
+    margin-left: 70px;
+}
+
+.header-list{
+    display: flex;
+    gap: 30px;
+}
+
+
+/* альтернатива */
+
+/* .header-item:not(:last-child){
+    margin-right: 30px;
+} */
 
 .header-link{
     font-weight: 600;
@@ -66,6 +100,13 @@ img{
     letter-spacing: 0.1em;
     
     color: var(--white-color);
+
+    display: block;
+    padding: 40px 0; 
+}
+
+.header-group{
+    margin-left: auto;
 }
 
 .tel-link{
@@ -166,7 +207,17 @@ img{
 
 /* about us */
 
-.group{
+.about-container{
+    display: flex;
+    gap: 30px;
+}
+
+.about-list{
+    display: flex;
+    gap: 30px;
+}
+
+.about-group{
     width: 500px;
 }
 
@@ -196,6 +247,13 @@ img{
 }
 
 .sub-title{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: calc(30 / 18);
+    letter-spacing: 0.02em;
+    
+    color: var(--desc-txt-cl);
+
     margin-bottom: 20px;
 }
 
@@ -213,6 +271,19 @@ img{
 
 /* priece */
 
+.priece-list{
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 50px;
+}
+
+.priece-item{
+    flex-basis: 570px;
+
+    padding: 30px 40px;
+}
+
 .priece-inner-item{
     font-weight: 400;
     font-size: 18px;
@@ -224,6 +295,69 @@ img{
     margin-bottom: 20px;
 }
 
-.priece-inner-item:last-child{
+.priece-inner-item:not(:last-child){
+    margin-bottom: 20px;
+}
+
+/* альтернатива */
+/* .priece-inner-item:last-child{
     margin-bottom: 0;
+} */
+
+.priece-btn{
+    display: block;
+    margin: 0 auto;
+}
+
+/* school */
+
+.school-container{
+    display: flex;
+    justify-content: center;
+}
+
+.school-list{
+    display: flex;
+    flex-wrap: wrap;
+
+    flex-basis: 370px;
+}
+
+.school-grouop{
+    flex-basis: 500px;
+
+    margin-left: 130px;
+}
+
+.school-subtitle{
+    font-weight: 400;
+}
+
+.school-item{
+    max-width: 170px;
+
+    background-color: var(--bg-card-cl);
+}
+
+.quntity{
+    font-weight: 700;
+    font-size: 42px;
+    line-height: calc(57 / 42);
+    text-align: center;
+    letter-spacing: 0.05em;
+    
+    color: var(--list-txt-color);
+}
+
+.school-desc{
+    font-family: var(--main-font);
+    font-weight: 600;
+    font-size: 11px;
+    line-height: calc(15 / 11);
+        
+    color: var(--list-txt-color);
+}
+
+.school-group-text{
+    padding: 20px 20px;
 }
