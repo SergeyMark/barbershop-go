@@ -53,6 +53,19 @@ img{
     display: block;
 }
 
+.hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 /* Fover and Focus */
 
 .header-link:hover,
@@ -319,8 +332,8 @@ img{
 .school-list{
     display: flex;
     flex-wrap: wrap;
-
     flex-basis: 370px;
+    gap: 30px;
 }
 
 .school-grouop{
@@ -336,6 +349,8 @@ img{
 .school-item{
     max-width: 170px;
 
+    text-align: center;
+
     background-color: var(--bg-card-cl);
 }
 
@@ -349,6 +364,15 @@ img{
     color: var(--list-txt-color);
 }
 
+.plus{
+    font-family: var(--main-font);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: calc(22 / 16);
+    
+    color: var(--effect-tx-color);
+}
+
 .school-desc{
     font-family: var(--main-font);
     font-weight: 600;
@@ -360,4 +384,62 @@ img{
 
 .school-group-text{
     padding: 20px 20px;
+}
+
+/* team */
+
+.team-title{
+    font-family: var(--seconnd-font);
+    font-weight: 700;
+    font-size: 42px;
+    line-height: calc(49 / 42);
+    letter-spacing: 0.05em;
+    
+    color: var(--list-txt-color);
+
+    margin-bottom: 44px;
+}
+
+.team-sociale{
+    display: flex;
+    gap: 30px;
+}
+
+.team-group{
+    padding-top: 30px;
+}
+
+.sociale-title{
+    font-size: 18px;
+    line-height: calc(25 / 18);
+    text-align: center;
+    letter-spacing: 0.02em;
+    
+    color: var(--list-txt-color);
+
+    margin-bottom: 8px;
+}
+
+.sociale-text{
+    font-size: 14px;
+    line-height: calc(19 / 14);
+    text-align: center;
+    letter-spacing: 0.02em;
+    
+    color: var(--effect-tx-color);
+}
+
+.sociale-link{
+    display: none;
+}
+
+/* gallery */
+
+.gallery-list{
+    display: flex;
+    gap: 30px;
+}
+
+.gallery-subject{
+    margin-bottom: 44px;
 }
