@@ -12,6 +12,9 @@
     /* Background Color */
     --effect-bg-color: #FF6C00;
     --bg-card-cl: #F7F7F7;
+    /* Grid */
+    --items: 3;
+    --indent: 30px;
 }
 
 .page {
@@ -400,9 +403,14 @@ img{
     margin-bottom: 44px;
 }
 
-.team-sociale{
+.team-list{
     display: flex;
-    gap: 30px;
+    flex-wrap: wrap;
+    gap: var(--indent);
+}
+
+.sociale-item{
+    flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
 }
 
 .team-group{
