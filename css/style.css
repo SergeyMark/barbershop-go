@@ -12,6 +12,8 @@
     /* Background Color */
     --effect-bg-color: #FF6C00;
     --bg-card-cl: #F7F7F7;
+    --bg-price-cl: #111319;
+    --bg-contact-cl: #191C26;
     /* Grid */
     --items: 3;
     --indent: 30px;
@@ -177,6 +179,10 @@ img{
 }
 
 .hero-uppertitle {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
     font-weight: 600;
     font-size: 11px;
     line-height: calc(15 / 11);
@@ -186,6 +192,15 @@ img{
     color: var(--grey-txt-color-60);
 
     margin-bottom: 20px;
+}
+
+.hero-uppertitle::before{
+    content: "";
+    width: 60px;
+    height: 1px;
+    display: block;
+    background-color: var(--grey-txt-color-60);
+
 }
 
 .hero-title {
@@ -287,20 +302,44 @@ img{
 
 /* priece */
 
-.priece-list{
+.price{
+    max-width: 1600px;
+
+    margin: 0 auto;
+
+    background-color: var(--bg-price-cl);
+    background-image: url(../img/price/img.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.price-up{
+    color: var(--grey-txt-color-60);
+}
+
+.price-title{
+    color: var(--light-color);
+}
+
+.price-list{
     display: flex;
     justify-content: space-between;
 
     margin-bottom: 50px;
 }
 
-.priece-item{
+.price-item{
     flex-basis: 570px;
 
     padding: 30px 40px;
 }
 
-.priece-inner-item{
+.price-inner-item{
+    display: flex;
+    align-items: baseline;
+    gap: 25px;
+
     font-weight: 400;
     font-size: 18px;
     line-height: calc(30 / 18);
@@ -311,7 +350,21 @@ img{
     margin-bottom: 20px;
 }
 
-.priece-inner-item:not(:last-child){
+.price-inner-item::before{
+    content: '';
+    display: block;
+    height: 1px;
+
+    flex-grow: 1;
+
+    background-color: rgba(157, 164, 189, 0.12);
+}
+
+.price-item-serv{
+    order: -1;
+}
+
+.price-inner-item:not(:last-child){
     margin-bottom: 20px;
 }
 
@@ -320,7 +373,7 @@ img{
     margin-bottom: 0;
 } */
 
-.priece-btn{
+.price-btn{
     display: block;
     margin: 0 auto;
 }
@@ -450,4 +503,42 @@ img{
 
 .gallery-subject{
     margin-bottom: 44px;
+}
+
+/* contact */
+
+.contats{
+    max-width: 1600px;
+    margin: 0 auto;
+    
+        background-color: var(--bg-contact-cl);
+        background-image: url(../img/contacts/bg-contacts.png);
+        background-position: left calc(50% + 420px) top;
+        background-repeat: no-repeat;
+        background-size: contain;
+}
+
+/* footer */
+
+.footer{
+    max-width: 1600px;
+    margin: 0 auto;
+
+    background-color: var(--bg-card-cl);
+}
+
+.media-list{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.media-list::before{
+    content: '';
+    
+    width: 60px;
+    height: 1px;
+    display: block;
+
+    background-color: var(--list-txt-color);
 }
