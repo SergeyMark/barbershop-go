@@ -444,6 +444,10 @@ img{
 
 /* team */
 
+.team-section{
+    background-color: var(--bg-card-cl);
+}
+
 .team-title{
     font-family: var(--seconnd-font);
     font-weight: 700;
@@ -490,9 +494,52 @@ img{
     color: var(--effect-tx-color);
 }
 
-.sociale-link{
-    display: none;
+.social-bottom{
+    margin-bottom: 30px;
 }
+
+.social-list{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.sociale-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+
+    background-color: var(--light-color);
+    border-radius: 50%;
+
+    color: var(--list-txt-color);
+}
+
+.social-icon{
+    fill: currentColor;
+}
+
+.sociale-link:hover {
+    color: var(--effect-tx-color);
+    background-color: var(--text-color);
+}
+
+/* способ №1 но надо добовлять еще ховер на сылку */
+/* .social-icon {
+    fill: var(--list-txt-color);
+}
+
+.sociale-link:hover{
+    background-color: var(--text-color);
+}
+
+.sociale-link:hover .social-icon{
+    fill: var(--effect-tx-color);
+} */
+/* ---------------------------------------------- */
 
 /* gallery */
 
