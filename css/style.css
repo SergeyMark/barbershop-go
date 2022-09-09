@@ -94,8 +94,12 @@ img{
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 10;
 
     width: 100%;
+
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(4px);
 }
 
 .header-container{
@@ -173,12 +177,40 @@ img{
 
 /* Hero */
 
-.hero {
-    background-color: grey;
-}
-
 .hero-container{
     position: relative;
+
+    display: flex;
+    align-items: center;
+}
+
+.hero-left-side{
+    width: 155px;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+
+    background-color: var(--light-color);
+}
+
+.hero-media-list{
+    display: flex;
+    align-items: center;
+}
+
+.hero-item{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-item:first-child::before{
+    content: "";
+    width: 60px;
+    height: 1px;
+    display: block;
+    background-color: var(--list-txt-color);
 }
 
 .hero-item {
@@ -194,6 +226,14 @@ img{
     padding-top: 273px;
     padding-bottom: 208px;
     padding-left: 100px;
+
+    background-color: var(--bg-contact-cl);
+    background-image: url(../img/hero-slader/Slider-img-2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    flex-grow: 1;
 }
 
 .hero-uppertitle {
@@ -237,6 +277,8 @@ img{
     letter-spacing: 0.02em;
     
     color: var(--text-color);
+
+    max-width: 360px;
 }
 
 .slider-control{
@@ -281,6 +323,33 @@ img{
     border-bottom: 1px solid rgba(157, 164, 189, 0.6);
 
     cursor: pointer;
+}
+
+/* hero - panination */
+
+.slaider-pagination{
+    position: absolute;
+    top: calc(50% - 15px);
+    right: 20px;
+}
+
+.slaider-pagination-item{
+    width: 8px;
+    height: 2px;
+
+    margin-left: auto;
+    
+    background-color: var(--text-color);
+}
+
+.slaider-pagination-item:not(:last-child){
+    margin-bottom: 12px;
+}
+
+.slaider-pagination-item.active{
+    width: 18px;
+       
+    background-color: var(--light-color);
 }
 
 /* about us */
@@ -380,6 +449,14 @@ img{
     flex-basis: 570px;
 
     padding: 30px 40px;
+}
+
+.price-item:first-child{
+    background: linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.2) 100%);
+}
+
+.price-item:last-child{
+    background: linear-gradient(180deg, #090B13 0%, rgba(9, 11, 19, 0.2) 100%);
 }
 
 .price-inner-item{
@@ -635,4 +712,55 @@ img{
     display: block;
 
     background-color: var(--list-txt-color);
+}
+
+
+/* MODAL WINDOW */
+
+.backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--grey-txt-color-60);
+
+    transition: opacity 250ms linear,
+                visibility 250ms linear;
+}
+
+.modal-window{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 500px;
+    height: 500px;
+    
+    background-color: var(--bg-card-cl);
+    
+    border-radius: 5px;
+}
+
+.modal-btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    width: 25px;
+    height: 25px;
+
+    border-radius: 50px;
+
+    cursor: pointer;
+}
+
+.backdrop.is-hidden{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 }

@@ -56,7 +56,9 @@
           <a class="tel-link" href="tel:+380441111111" target="_blank" rel=""
             >+38 044 111 11 11</a
           >
-          <button class="header-btn btn" type="button">Online-booking</button>
+          <button class="header-btn btn" type="button" data-modal-open>
+            Online-booking
+          </button>
         </div>
       </div>
     </header>
@@ -65,26 +67,28 @@
       <!-- section hero -->
       <section class="hero">
         <div class="container hero-container">
-          <ul class="hero-list">
-            <li class="hero-item">
-              <a
-                class="hero-link link"
-                href=""
-                target="_blank"
-                rel="noopener noreferrer"
-                >Youtube</a
-              >
-            </li>
-            <li class="hero-item">
-              <a
-                class="hero-link link"
-                href=""
-                target="_blank"
-                rel="noopener noreferrer"
-                >Instagram</a
-              >
-            </li>
-          </ul>
+          <div class="hero-left-side">
+            <ul class="hero-media-list">
+              <li class="hero-item">
+                <a
+                  class="hero-link link"
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Youtube</a
+                >
+              </li>
+              <li class="hero-item">
+                <a
+                  class="hero-link link"
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Instagram</a
+                >
+              </li>
+            </ul>
+          </div>
 
           <div class="hero-group">
             <p class="hero-uppertitle">A hair salon for men in Kyiv</p>
@@ -102,6 +106,12 @@
             <li class="slider-item">
               <button class="slider-btn" type="button">Forward</button>
             </li>
+          </ul>
+          <!-- pagination -->
+          <ul class="slaider-pagination">
+            <li class="slaider-pagination-item active"></li>
+            <li class="slaider-pagination-item"></li>
+            <li class="slaider-pagination-item"></li>
           </ul>
         </div>
       </section>
@@ -528,5 +538,18 @@
         </li>
       </ul>
     </footer>
+
+    <!-- Modal Window -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal-window">
+        <button class="modal-btn" data-modal-close>
+          <svg class="modal-close" width="20" height="20">
+            <use href=""></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- скрипт модального окна -->
+    <script src="./js/modal.js"></script>
   </body>
 </html>
