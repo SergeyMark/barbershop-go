@@ -173,6 +173,9 @@ img{
 
 .header-btn{
     color: var(--effect-tx-color);
+
+    transition: color 250ms linear,
+                background-color 250ms linear;
 }
 
 /* Hero */
@@ -181,28 +184,29 @@ img{
     position: relative;
 
     display: flex;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .hero-left-side{
-    width: 155px;
-    overflow: hidden;
+    position: relative;
 
-    display: flex;
-    align-items: center;
+    width: 155px;
+
+    /* display: flex;
+    align-items: flex-end; */
 
     background-color: var(--light-color);
 }
 
-.hero-media-list{
+.media-list{
     display: flex;
     align-items: center;
+    gap: 40px
 }
 
-.hero-item{
-    display: flex;
-    align-items: center;
-    gap: 40px;
+.hero-media-list{
+    transform: rotate(-90deg);
+    transform-origin: top left ;
 }
 
 .hero-item:first-child::before{
@@ -214,12 +218,21 @@ img{
 }
 
 .hero-item {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
     font-weight: 600;
     font-size: 11px;
     line-height: calc(15 / 11);
     letter-spacing: 0.2em;
     
     color: var(--list-txt-color);
+}
+
+.hero-link{
+    display: inline-block;
+    padding: 25px 0;
 }
 
 .hero-group{
@@ -441,6 +454,7 @@ img{
 .price-list{
     display: flex;
     justify-content: space-between;
+    gap: 20px;
 
     margin-bottom: 50px;
 }
@@ -449,14 +463,24 @@ img{
     flex-basis: 570px;
 
     padding: 30px 40px;
+
+    transition: transform 250ms linear;
 }
 
 .price-item:first-child{
     background: linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.2) 100%);
+    transform: perspective(1000px) rotateY(3deg);
+    transform-origin: left center;
 }
 
 .price-item:last-child{
     background: linear-gradient(180deg, #090B13 0%, rgba(9, 11, 19, 0.2) 100%);
+    transform: perspective(1000px) rotateY(-3deg);
+    transform-origin: right center;
+}
+
+.price-item:hover{
+    transform: rotateY(0);
 }
 
 .price-inner-item{
