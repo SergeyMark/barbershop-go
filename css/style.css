@@ -56,6 +56,7 @@ h1,h2,h3,h4,h5,h6,p{
 
 img{
     display: block;
+    width: 100%;
 }
 
 .hidden {
@@ -620,7 +621,9 @@ img{
 
 .sociale-item{
     flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+    
 }
+
 
 .team-group{
     padding-top: 30px;
@@ -692,6 +695,41 @@ img{
     fill: var(--effect-tx-color);
 } */
 /* ---------------------------------------------- */
+
+/* overlay */
+
+.social-thumb{
+    position: relative;
+
+    overflow: hidden;
+}
+
+.social-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    padding: 20px;
+
+    width: 340px;
+    height: 305px;
+
+    background-color: var(--grey-txt-color-60);
+
+    transform: translateY(100%);
+    transition: transform 250ms linear;
+}
+
+.overlay-text{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--effect-tx-color);
+}
+
+.sociale-item:hover .social-overlay{
+    transform: translateY(0);
+}
 
 /* gallery */
 
