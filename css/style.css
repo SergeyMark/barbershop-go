@@ -377,6 +377,10 @@ img{
     gap: 30px;
 }
 
+.about-img{
+    animation: slaider-img 6000ms linear 1000ms infinite;
+}
+
 .about-group{
     width: 500px;
 }
