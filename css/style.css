@@ -742,17 +742,20 @@ img{
     margin-bottom: 44px;
 }
 
+/* booking */
+
+
 /* contact */
 
 .contats{
     max-width: 1600px;
     margin: 0 auto;
     
-        background-color: var(--bg-contact-cl);
-        background-image: url(../img/contacts/bg-contacts.png);
-        background-position: left calc(50% + 420px) top;
-        background-repeat: no-repeat;
-        background-size: contain;
+    background-color: var(--bg-contact-cl);
+    background-image: url(../img/contacts/bg-contacts.png);
+    background-position: left calc(50% + 420px) top;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 /* footer */
